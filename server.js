@@ -11,10 +11,10 @@ const routes = require("./routes/routes")
 app.use(cors())
 app.use(express.json())
  
-app.use(express.static(path.join(__dirname, "./client/dist")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", (req, resp) => {
-  return  resp.sendFile(path.join(__dirname, "./client/dist/index.html"));
+  return  resp.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 
